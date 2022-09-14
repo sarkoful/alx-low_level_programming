@@ -1,21 +1,20 @@
-nclude "main.h"
+#include "main.h"
 /**
  *  * main - Prints _putchar
  *   *
- *    * Return: 0 Always
+ *    * Return: Always 0 (Success)
 	*/
 int main(void)
 {
-	char string[8] = "_putchar";
-	int n = 0;
-
-	while (n < 8)
-	{
-		_putchar(string[n]);
-		++n;
-	}
-
-	_putchar(8);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
 	return (0);
-
 }
