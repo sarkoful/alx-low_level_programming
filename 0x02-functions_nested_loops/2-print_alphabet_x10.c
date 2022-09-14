@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  * print_alphabeti_x10 - Prints all the alphabets, a-z ten times
+ *  * print_alphabeti_x10 - Prints all the alphabets, a-z ten times in lowercase
  *   *
  *    * Return: always 0 success
 	*/
