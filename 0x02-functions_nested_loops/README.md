@@ -1,1 +1,1 @@
-Write a function that adds two integers and returns the resul
+Write a function that prints 10 times the alphabet, in lowercase, followed by a new line
