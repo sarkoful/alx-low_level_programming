@@ -2,18 +2,20 @@
 /**
  *  * main - Prints _putchar
  *   *
- *    * Return: Always 0 (Success)
+ *    * Return: 0 Always
 	*/
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char string[8] = "_putchar";
+	int n = 0;
+
+	while (n < 8)
+	{
+		_putchar(string[n]);
+		++n;
+	}
+
+	_putchar(8);
 	return (0);
+
 }
