@@ -15,7 +15,7 @@ int main(void)
 		++n;
 	}
 
-	_putchar(10);
+	_putchar(8);
 	return (0);
 
 }
