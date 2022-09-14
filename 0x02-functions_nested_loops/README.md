@@ -1,1 +1,1 @@
-The standard library provides a similar function: isalpha. Run man isalpha to learn mo
+Write a function that prints the sign of a numbe
