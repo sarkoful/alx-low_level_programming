@@ -1,12 +1,12 @@
-#include "main.h
+#include "main.h"
 /**
-*add - Adds two integers.
- * @num1: The first integer to be added.
- *  * @num2: The second integer to be added.
- *   *
- *    * Return: The result of the addition.
+ *  * add - adds two numbers anr produce the answer
+ *   * @a:first integer value
+ *    * @b:second integer value
+ *     *
+ *      * Return: the summation.
 	*/
- int add(int num1, int num2)
+int add(int a, int b)
 {
-	return (num1 + num2);
+	return (a + b);
 }
