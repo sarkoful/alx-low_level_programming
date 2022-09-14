@@ -1,1 +1,1 @@
-Write a function that prints 10 times the alphabet, in lowercase, followed by a new line
+he standard library provides a similar function: islower. Run man islower to learn mor
