@@ -22,6 +22,6 @@ int main(void)
 		num2 = sumPrevTwo;
 		i++;
 	}
-	printf("%ld\n", sumEven);
+	_putchar("%ld\n", sumEven);
 	return (0);
 }
