@@ -1,1 +1,1 @@
-Write a function that checks for uppercase characte
+Write a function that multiplies two integer
