@@ -1,32 +1,23 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- *  * print_numbers - a function that prints the numbers, from 0 to 9
- *   *
- *    * Return: 0-9 followed by newline
+ * *print_most_numbers - prints numbers except 2 and 4
+ * *
+ * *Return: returns nothing
 	*/
 
-void print(long n)
+void print_most_numbers(void)
 {
-	    // If number is smaller than 0, put a - sign
-	    //     // and change number to positive
-	    //         if (n < 0) {
-	    //                 putchar('-');
-	    //                         n = -n;
-	    //                             }
-	    //                              
-	    //                                  // Remove the last digit and recur
-	    //                                      if (n/10)
-	    //                                              print(n/10);
-	    //                                               
-	    //                                                   // Print the last digit
-	    //                                                       putchar(n%10 + '0');
-	    //                                                       }
-	    //                                                        
-	    //                                                        // Driver program to test above function
-	    //                                                        int main()
-	    //                                                        {
-	    //                                                            long int n = 12045;
-	    //                                                                print(n);
-	    //                                                                    return 0;
-	    //                                                                    }
+	int n;
+
+	for (n = 48; n < 58; n++)
+	{
+		if ((n == 50) || (n == 52))
+		{
+			continue;
+		}
+		putchar(n);
+	}
+	putchar(10);
+}
