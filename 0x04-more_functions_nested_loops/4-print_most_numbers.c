@@ -5,11 +5,28 @@
  *   *
  *    * Return: 0-9 followed by newline
 	*/
-void print_numbers(void)
-{
-	int i;
 
-	for (i = 0; i <= 9; i++)
-		_putchar(i + '0');
-	_putchar('\n');
-}
+void print(long n)
+{
+	    // If number is smaller than 0, put a - sign
+	    //     // and change number to positive
+	    //         if (n < 0) {
+	    //                 putchar('-');
+	    //                         n = -n;
+	    //                             }
+	    //                              
+	    //                                  // Remove the last digit and recur
+	    //                                      if (n/10)
+	    //                                              print(n/10);
+	    //                                               
+	    //                                                   // Print the last digit
+	    //                                                       putchar(n%10 + '0');
+	    //                                                       }
+	    //                                                        
+	    //                                                        // Driver program to test above function
+	    //                                                        int main()
+	    //                                                        {
+	    //                                                            long int n = 12045;
+	    //                                                                print(n);
+	    //                                                                    return 0;
+	    //                                                                    }
