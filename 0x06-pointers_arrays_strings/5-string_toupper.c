@@ -5,7 +5,7 @@
  * @str: string to be changed
  *
  * Return: address tp the string
- */
+	*/
 
 char *string_toupper(char *)
 {
