@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  * incrementer - function to iterate through a number and try to get a divisor
+ *  * incrementer - function to iterate through a number
  *   * @i: divisor
  *    * @n: number to divide
  *     * Return: 0 if divisor found, 1 if divisor not found
