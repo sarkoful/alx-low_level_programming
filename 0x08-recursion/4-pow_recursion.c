@@ -1,17 +1,18 @@
 #include "main.h"
-
 /**
- * _pow_recursion - return the value of x raised to the power of y
- * @c: number to be used
- * @y: exponent to be used
- *
- * Return: x ^ y
- */
+ *  * _pow_recursion - function to get x raised to the power of y
+ *   * @x: the number
+ *    * @y: the power
+ *     * this is relatively simple when the logic has been explained
+ *      * Return: x to the power of y, else -1 (when y < 0)
+	*/
+
 int _pow_recursion(int x, int y)
 {
-	if (y < 0)
-		return (-1);
+	if (y > 0)
+		return (x * _pow_recursion(x, (y - 1)));
 	else if (y == 0)
 		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	else
+		return (-1);
 }
