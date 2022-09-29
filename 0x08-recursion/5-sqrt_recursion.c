@@ -22,8 +22,6 @@ int power(int i, int n)
  *   * natural squareroot should  x such that x*x = n
  *    * @n: number to get the square root of
  *     * Return: sqrt of n or -1 if n does not have a natural square root
- *      * This took an awful lot of time, but I feel a sense of pride getting this one
- *       * even with the cryptic online assistance I got - Bravo
 	*/
 
 int _sqrt_recursion(int n)
