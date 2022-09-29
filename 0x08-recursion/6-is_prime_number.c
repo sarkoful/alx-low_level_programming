@@ -1,33 +1,38 @@
 #include "main.h"
 
 /**
- * is_prime_number - return the 1 if n is prime
- * @n: number to be checked
- *
- * Return: 1 if n is prime, 0 otherwise
- *
- */
-int is_prime_number(int n)
-{
-	int start = n / 2;
+ *  * incrementer - function to iterate through a number and try to get a divisor
+ *   * @i: divisor
+ *    * @n: number to divide
+ *     * Return: 0 if divisor found, 1 if divisor not found
+	*/
 
-	if (n <= 1)
-		return (0);
-	return (is_prime(n, start));
+int incrementer(int i, int n)
+{
+	if (n % i == 0)
+	{
+		if (n == i) /* if it gets to n before finding a divisor, then it is prime*/
+			return (1);
+		else /*else it is not prime*/
+			return (0);
+	}
+	else
+		return (incrementer((i + 1), n)); /* while loop equivalent*/
 }
 
 /**
- * is_prime - returns the 1 if n is prime
- * @n: number to be checked
- * @start: number to start checking from
- *
- * Return: 1 if n is prime, 0 otherwise
- */
-int is_prime(int n, int start)
+ *  * is_prime_number - function to do just what its name says
+ *   * @n: number to check if prime
+ *    * Return: 1 if prime, 0 if not
+	*/
+
+int is_prime_number(int n)
 {
-	if (start <= 1)
-		regturn (1);
-	else if (n % start == 0)
+
+	if (n == 1)
 		return (0);
-	return (is_prime(n, start - 1));
+	else if (n <= 0)
+		return (0);
+	else
+		return (incrementer(2, n));
 }
