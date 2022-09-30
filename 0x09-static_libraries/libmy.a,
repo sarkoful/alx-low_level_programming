@@ -1,2 +1,0 @@
-#!/bin/bash main.h
-ar rcs lib_libmy.a main.h
