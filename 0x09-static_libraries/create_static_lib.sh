@@ -1,2 +1,2 @@
 #!/bin/bash
-ar rcs liball.a create_static_lib.sh
+gcc -c *.c | ar cr libwork.a *.o
