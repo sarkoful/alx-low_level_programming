@@ -1,56 +1,78 @@
 #include "main.h"
 
 /**
- * len- returns length of str
- * @str: string counted
- * Return: returns the length
+ * * wordCounterRec - count num of words recursively
+ * * @str: pointer to char
+ * * @i: current index
+ * * Return: number of words
  */
-int len(char *str)
-{
-		int len = 0;
 
-		if (str != NULL)
-		{
-			while (str[len]
-				len++;
-		}
-	return (len);
+int wordCounterRec(char *str, int i)
+{
+	if (str[i] == '\0')
+		return (0);
+	if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0')
+		return (1 + wordCounterRec(str, i + 1));
+	return (wordCounterRec(str, i + 1));
 }
 
 /**
- * argstostr - a function that concatenate all the arguments of your program
- * @ac: count of args passed to the function
- * @av: array of arguments
- *
- * Return: pointer to the new string
+ * * word_counter - counts number of words in 1d array of strings
+ * * @str: pointer to char
+ * * Return: number of words
  */
-
-char *argstostr(int ac, char **av)
+int word_counter(char *str)
 {
-		char *new_string = NULL;
-		int k = 0, i = ac, j, sum = 0, temp = 0;
+	if (str[0] != ' ')
+		return (1 + wordCounterRec(str, 0));
+	return (wordCounterRec(str, 0));
+}
 
-		if (ac == 0 || av == NULL
-			return (NULL);
-		while (ac--)
-			sum += (len(av[ac]) + 1);
-		new_string = (char *) malloc(sum + 1);
+/**
+ * * strtow - splits a string into words.
+ * * @str: string to be splitted
+ * * Return: pointer to an array of strings (words) or null
+ */
+char **strtow(char *str)
+{
+	char **strDup;
+	int i, n, m, words;
 
-		if (new_string != NULL)
+	if (str == NULL || str[0] == 0)
+		return (NULL);
+	words = word_counter(str);
+	if (words < 1)
+		return (NULL);
+	strDup = malloc(sizeof(char *) * (words + 1));
+	if (strDup == NULL)
+		return (NULL);
+	i = 0;
+	while (i < words && *str != '\0')
+	{
+		if (*str != ' ')
 		{
-			while (k < i)
+			n = 0;
+			while (str[n] != ' ')
+				n++;
+			strDup[i] = malloc(sizeof(char) * (n + 1));
+			if (strDup[i] == NULL)
 			{
-				for (j = 0; av[k][j] != '\0'; j++)
-					new_string[j + temp] = av[k][j];
-				new_string[temp + j] = '\n';	
-				temp += (j + i);
-				k++;
+				while (--i >= 0)
+					free(strDup[--i]);
+				free(strDup);
+				return (NULL);
 			}
-			new_string[temp] = '\0';
+			m = 0;
+			while (m < n)
+			{
+				strDup[i][m] = *str;
+				m++, str++;
+			}
+			strDup[i][m] = '\0';
+			i++;
 		}
-		else
-		{
-			return (NULL);
-		}
-		return (new_string);
+		str++;
+	}
+	strDup[i] = '\0';
+	return (strDup);
 }
