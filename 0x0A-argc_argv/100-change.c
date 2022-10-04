@@ -8,7 +8,7 @@
  *  * @argc: count of arguments
  *   * @argv: vector of arguments
  *    *Return: 0
- */
+	*/
 int main(int argc, char  *argv[])
 {
 	int coins = 0;
