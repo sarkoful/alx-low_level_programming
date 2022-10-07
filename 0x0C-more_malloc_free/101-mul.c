@@ -85,7 +85,7 @@ int is_valid(char *num)
  *   * err - errors r us
  *     * @status: error code 4 exit
  *       * Return: void
- *         */
+	*/
 void err(int status)
 {
 	_putchar('E');
