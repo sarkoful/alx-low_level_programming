@@ -1,1 +1,1 @@
-The programming is for matured programmers
+The project is not easy
