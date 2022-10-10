@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _realloc - realloc old ptr to new
- * @ptr: old one
- * @old_size: old size of pointer
- * @new_size: new size of pointer
- * Return: void *
- */
+ *  * _realloc - realloc old ptr to new
+ *   * @ptr: old one
+ *    * @old_size: old size of pointer
+ *     * @new_size: new size of pointer
+ *      * Return: void *
+	*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int i;

@@ -2,43 +2,56 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * string_nconcat - concats strings
- * @s1: string one
- * @s2: string two
- * @n: n amount of bytes
- * Return: return a char val
- */
+ *   *_strlen - counts and returns string length
+ *     * @s: that's the string
+ *       *
+ *         * Return: the length
+	*/
+int _strlen(char *s)
+{
+	int counter = 0;
+
+	if (!*s)
+		return (0);
+	while (*s)
+	{
+		counter++;
+		s++;
+	}
+	return (counter);
+}
+/**
+ *  * string_nconcat - concats 2 strings
+ *   * @s1: the first str
+ *    * @s2: the second str
+ *     * @n: how much of s2 to add
+ *      * Return: ptr to new string
+	*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, len1, len2;
-	char *s;
+	char *new;
+	int total = 0;
+	int i;
+	int j = 0;
 
-	if (s2 == NULL)
-		s2 = "";
-	if (s1 == NULL)
+	if (!s1)
 		s1 = "";
-
-	len1 = 0;
-	len2 = 0;
-	while (s2[len2] != '\0')
-		len2++;
-	while (s1[len1] != '\0')
-		len1++;
-
-	if (n >= len2)
-		n = len2;
-
-	s = malloc(sizeof(char) * n + len1 + 1);
-	if (s == NULL)
+	if (!s2)
+		s2 = "";
+	total += _strlen(s1) + n;
+	new = malloc((total * sizeof(char)) + 1);
+	if (new == NULL)
+	{
 		return (NULL);
-
-	for (i = 0; i < len1; i++)
-		s[i] = s1[i];
-
-	for (i = 0; i < n; i++)
-		s[i + len1] = s2[i];
-
-	s[i + len1] = '\0';
-
-	return (s);
+	}
+	for (i = 0; s1[i]; i++)
+	{
+		new[i] = s1[i];
+	}
+	for (; n || !s2; n--, i++, j++)
+	{
+		new[i] = s2[j];
+	}
+	new[i] = '\0';
+	return (new);
 }
